@@ -133,7 +133,7 @@
 - (0040,2001)   // Reason for Imaging Service Request^M
 - (0032,1030)   // Reason for Study^M
 - (0400,0402)   // Referenced Digital Signature Sequence^M
-- (0038,1234)   // Referenced Patient Alias Sequence^M
+- (0038,0004)   // Referenced Patient Alias Sequence^M
 - (0008,1120)   // Referenced Patient Sequence^M
 - (0400,0403)   // Referenced SOP Instance MAC Sequence^M
 - (0008,0092)   // Referring Physician’s Address^M
