@@ -1,5 +1,6 @@
 import os
 import pydicom as pydcm 
+import fnmatch
 
 inputList = 'list_dirs.txt'
 with open(inputList, 'r') as fp:
@@ -20,6 +21,8 @@ with open(inputList, 'r') as fp:
                 if ((data.ImageType[2].lower() == 'presentation') or (data.ImageType[2].lower() == 'presentations')):
                     print ('ATTN! %s in file %s' % (data.ImageType, input_dicom))
                 if (data.ImageType[2].lower() == 'other'):
+                    print ('ATTN! %s in file %s' % (data.ImageType, input_dicom))
+                if (fnmatch.fnmatch(data.ImageType[2].lower(), 'screen'))
                     print ('ATTN! %s in file %s' % (data.ImageType, input_dicom))
             except:
                   print('No metadata for %s' % input_dicom)
