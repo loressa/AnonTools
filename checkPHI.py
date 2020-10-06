@@ -27,6 +27,8 @@ def check_reports(input_dicom):
              print ('ATTN! %s in file %s' % (data.ImageType, input_dicom))
          if (fnmatch.fnmatch(data.ImageType[2].lower(), 'screen')):
              print ('ATTN! %s in file %s' % (data.ImageType, input_dicom))
+         if ('screen' in data.ImageType[2].lower()):
+             print ('ATTN! %s in file %s' % (data.ImageType, input_dicom))
     except:
         print('No metadata for %s' % input_dicom)
 
